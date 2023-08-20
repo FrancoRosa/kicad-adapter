@@ -1,8 +1,9 @@
-import pprint
 import csv
 
 from sexpdata import loads
 from json import dumps
+
+print('...building paths')
 
 
 def get_avr(path):
@@ -53,5 +54,7 @@ for i in z:
             }
 
 
-pp = pprint.PrettyPrinter(indent=4)
-pp.pprint(nets)
+with open("paths.json", 'w') as file:
+    # Write some content to the file
+    file.write(dumps(nets, indent=2))
+print('...done')
