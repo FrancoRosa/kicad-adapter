@@ -46,8 +46,8 @@ z = loads(data)
 nets = {}
 for i in z:
     if str(i[0]) == 'segment':
-        start = [translate(i[1][1]+e_avr, i[1][2]+n_avr)]
-        end = [translate(i[2][1]+e_avr, i[2][2]+n_avr)]
+        start = translate(i[1][1]+e_avr, i[1][2]+n_avr)
+        end = translate(i[2][1]+e_avr, i[2][2]+n_avr)
         width = i[3][1]
         net = i[5][1]
         if net in nets:
